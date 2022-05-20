@@ -1,20 +1,24 @@
 const express=require('express')
 const path=require('path')
 
-const PORT=process.env.PORT ?? 3000
+const PORT=process.env.PORT || 3000
 
 const app=express()
 
+const requestTime = require('./middlewares.js');
+
 app.set('view engine','ejs')
 app.set('views',path.resolve(__dirname,'ejs'))
-console.log(app.get('views'))
-console.log(app.get('view engine'))
+//console.log(app.get('views'))
+//console.log(app.get('view engine'))
 
 
 //app.use(express.static(path.resolve(__dirname,'static')))
 
 app.get('/',(req,res)=>{
+	//console.log(requestTime.reqTime())
     res.render('index', {title:'Main page',active:'main'})
+	
 })
 
 app.get('/contact',(req,res)=>{
