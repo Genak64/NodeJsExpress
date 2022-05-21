@@ -9,9 +9,10 @@ const requestTime = require('./middlewares.js');
 
 app.set('view engine','ejs')
 app.set('views',path.resolve(__dirname,'ejs'))
-//console.log(app.get('views'))
-//console.log(app.get('view engine'))
 
+//app.use(express.static(path.resolve(__dirname,'image')));
+app.use('/image',express.static('image'));
+app.use('/css',express.static('css'));
 
 //app.use(express.static(path.resolve(__dirname,'static')))
 
@@ -20,6 +21,8 @@ app.get('/',(req,res)=>{
     res.render('index', {title:'Main page',active:'main'})
 	
 })
+
+
 
 app.get('/contact',(req,res)=>{
     res.render('contact', {title:'Contact page',active:'contact'})

@@ -6,13 +6,32 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <%-include('./partials/head'); %>
     <title><%=title %></title>
 </head>
 <body>
 <%-include('./partials/navbardd'); %>
 <div class="container">
-<h1>Contact page</h1>
+    <div class="row">
+        <div class="col align-start text-wrap fs-3 margin-content" style="background-color: #EAAF75;">
+            Массажный кабинет , сауна и кабинет эстетической косметологии.
+            Мы находимся:
+            Украина, г. Каменское (Днепродзержинск)
+            ул. Лесопильная, 9
+            (рядом с пл. Ленина, за магазином «Мегаспорт» во дворе)
+        </div>
+
+        <div class="col align-end margin-content">
+            <img src="/image/mappr.jpg" class="img" alt="map">
+        </div>
+        <div class="container fs-5 text-center">
+            Все вопросы направляйте на webmaster@co-center.dp.ua  или оставляйте комментарии в форме ниже.
+        </div>
 </div>
+
+
+<%-include('./partials/footer'); %>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
