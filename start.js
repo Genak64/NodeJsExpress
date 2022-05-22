@@ -22,7 +22,9 @@ app.get('/',(req,res)=>{
 	
 })
 
-
+app.get('/sauna',(req,res)=>{
+    res.render('sauna', {title:'Sauna',active:'sauna'})
+})
 
 app.get('/contact',(req,res)=>{
     res.render('contact', {title:'Contact page',active:'contact'})

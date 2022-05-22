@@ -9,27 +9,69 @@
     <%-include('./partials/head'); %>
     <title><%=title %></title>
 </head>
+
 <body>
+
 <%-include('./partials/navbardd'); %>
 
 <div class="container">
     <div class="row">
         <div class="col margin-content">
-            <img src="/image/s0002.jpg" class="img-fluid" alt="sauna">
+            <img src="/image/bench800.jpg" class="img-fluid" alt="sauna">
             <h2>Сауна</h2>
             <p>Приятное место для Вашего отдыха - уютная сауна с камином, расположенная в центре города. Сюда легко добраться как общественным транспортом, так и на личном авто.</p>
         </div>
         <div class="col margin-content">
-            <img src="/image/anticelmassag_sm.jpg" class="img-fluid" alt="massage">
+            <img src="/image/massage800.jpg" class="img-fluid" alt="massage">
             <h2>Массажный кабинет</h2>
             <p>Хотите снять напряжение в мышцах, усталость, улучшить кровообращение и почувствовать себя лучше? Мы ждем Вас! Общий, антицеллюлитный, тайский и др. виды массажа.</p>
         </div>
         <div class="col margin-content">
-            <img src="/image/mesotherapy0_sm.jpg" class="img-fluid" alt="makiag">
+            <img src="/image/cosmetic800.jpg" class="img-fluid" alt="makiag">
             <h2>Кабинет эстетической косметологии</h2>
             <p>Предлагаем высококвалифицированные услуги, индивидуальный и бережный подход к Вашей коже. Мы поможем Вам приумножить красоту и сохранить молодость!</p>
         </div>
+        <div class="col margin-content">
+            <img src="/image/pexels-engin-akyurt-800.jpg" class="img-fluid" alt="makiag">
+            <h2>Парикмахерская</h2>
+            <p>Предлагаем высококвалифицированные услуги, индивидуальный и бережный подход к Вашим волосам. Мы поможем Вам приумножить красоту и сохранить молодость!</p>
+        </div>
     </div>
+</div>
+
+<div class="container">
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="/image/0000.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="/image/0001.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="/image/0002.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="/image/0003.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="/image/0004.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="/image/0005.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="/image/0006.jpg" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
 
 <%-include('./partials/footer'); %>
