@@ -5,7 +5,11 @@ const PORT=process.env.PORT || 3000
 
 const app=express()
 
-const requestTime = require('./middlewares.js');
+// создаем парсер для данных application/x-www-form-urlencoded
+const urlencodedParser = express.urlencoded({extended: false});
+
+//const requestTime = require('./middlewares.js');
+
 
 app.set('view engine','ejs')
 app.set('views',path.resolve(__dirname,'ejs'))
@@ -14,6 +18,14 @@ app.set('views',path.resolve(__dirname,'ejs'))
 app.use('/image',express.static('image'));
 app.use('/css',express.static('css'));
 
+app.use('/',(req,res,next)=>{
+	
+	console.log('middleware 1');
+	//console.log(requestTime.reqTime())
+    //res.render('index', {title:'Main page',active:'main'})
+	next();
+})
+ 
 //app.use(express.static(path.resolve(__dirname,'static')))
 
 app.get('/',(req,res)=>{
@@ -29,6 +41,16 @@ app.get('/sauna',(req,res)=>{
 app.get('/contact',(req,res)=>{
     res.render('contact', {title:'Contact page',active:'contact'})
 })
+
+app.get('/signin',(req,res)=>{
+    res.render('signin', {title:'SingnIn page',active:'signin'})
+})
+
+app.post("/signin", urlencodedParser, function (request, response) {
+    if(!request.body) return response.sendStatus(400);
+    console.log(request.body);
+    response.send(`${request.body.userName} - ${request.body.userAge}`);
+});
 
 /*
 app.get('/',(req,res)=>{
