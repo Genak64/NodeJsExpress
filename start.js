@@ -38,6 +38,10 @@ app.get('/sauna',(req,res)=>{
     res.render('sauna', {title:'Sauna',active:'sauna'})
 })
 
+app.get('/massage',(req,res)=>{
+    res.render('massage', {title:'Massage',active:'massage'})
+})
+
 app.get('/contact',(req,res)=>{
     res.render('contact', {title:'Contact page',active:'contact'})
 })
@@ -46,10 +50,10 @@ app.get('/signin',(req,res)=>{
     res.render('signin', {title:'SingnIn page',active:'signin'})
 })
 
-app.post("/signin", urlencodedParser, function (request, response) {
-    if(!request.body) return response.sendStatus(400);
-    console.log(request.body);
-    response.send(`${request.body.userName} - ${request.body.userAge}`);
+app.post("/signin", urlencodedParser, function (req, res) {
+    if(!req.body) return res.sendStatus(400);
+    console.log(req.body);
+    res.send(`${req.body.userName} - ${req.body.userAge}`);
 });
 
 /*
