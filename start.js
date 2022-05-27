@@ -20,7 +20,7 @@ app.use('/css',express.static('css'));
 
 app.use('/',(req,res,next)=>{
 	
-	console.log('middleware 1');
+	//console.log('middleware 1');
 	//console.log(requestTime.reqTime())
     //res.render('index', {title:'Main page',active:'main'})
 	next();
