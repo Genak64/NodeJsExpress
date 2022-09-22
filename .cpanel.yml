@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - eport DEPLOYPATH=/home/genak161/test/tmp
-    - / start.js $DEPLOYPATH
+    - https://github.com/Genak64/NodeJsExpress start.js $DEPLOYPATH
