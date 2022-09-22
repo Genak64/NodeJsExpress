@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - eport DEPLOYPATH=/test/tmp
+    - /start.js $DEPLOYPATH
