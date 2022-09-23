@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - eport DEPLOYPATH=/home/genak161/test1
-    - start.js $DEPLOYPATH
+    - /bin/cp start.js $DEPLOYPATH
