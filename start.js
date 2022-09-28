@@ -71,7 +71,6 @@ app.get('/contact',(req,res)=>{
 app.get('/download',(req,res)=>{
     res.download(path.resolve(__dirname,'static','index.html'))
 })
-ver2
 */
 
 app.listen(PORT, ()=>{
