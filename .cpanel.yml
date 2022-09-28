@@ -4,4 +4,5 @@ deployment:
     - export DEPLOYPATH=/home/genak161/test1
     - /bin/cp start.js $DEPLOYPATH
     - /bin/cp middlewares.js $DEPLOYPATH
+    - /bin/rm -R $DEPLOYPATH/css
     - /bin/cp -R css $DEPLOYPATH
