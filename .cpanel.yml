@@ -2,5 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/genak161/test1
-    - /bin/rm /home/genak161/test1/start.js 
-    #- /bin/cp start.js $DEPLOYPATH
+    - /bin/cp start.js $DEPLOYPATH
