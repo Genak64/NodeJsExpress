@@ -1,0 +1,14 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/genak161/test
+    - /bin/cp start.js $DEPLOYPATH
+    - /bin/cp middlewares.js $DEPLOYPATH
+    - /bin/rm -R $DEPLOYPATH/css
+    - /bin/cp -R css $DEPLOYPATH
+    - /bin/rm -R $DEPLOYPATH/ejs
+    - /bin/cp -R ejs $DEPLOYPATH
+    - /bin/rm -R $DEPLOYPATH/image
+    - /bin/cp -R image $DEPLOYPATH
+    - /bin/rm -R $DEPLOYPATH/static
+    - /bin/cp -R static $DEPLOYPATH
