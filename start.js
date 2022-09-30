@@ -42,6 +42,14 @@ app.get('/massage',(req,res)=>{
     res.render('massage', {title:'Massage',active:'massage'})
 })
 
+app.get('/cosmetic',(req,res)=>{
+    res.render('cosmetic', {title:'Cosmetic',active:'cosmetic'})
+})
+
+app.get('/cut',(req,res)=>{
+    res.render('cut', {title:'Cut',active:'cut'})
+})
+
 app.get('/contact',(req,res)=>{
     res.render('contact', {title:'Contact page',active:'contact'})
 })
